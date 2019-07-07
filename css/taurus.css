@@ -1,0 +1,354 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+  font-size: 1em;
+}
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("../fonts/OpenSans-Light.ttf");
+  font-size: 1em;
+}
+body {
+  overflow-x: hidden;
+}
+header {
+  /* cabeçalho */
+  width: 100%;
+  height: 150px;
+  background-color: rgba(
+    230,
+    126,
+    34,
+    0.9
+  ); /* o rgba é para a transparência da tarja laranja */
+  z-index: 2; /* z index é o índice de profundidade, quanto maior o numero mai ana frente aparece */
+  position: relative;
+}
+header .container {
+  /* etilizar ou criar um bloco de estilo para toda tag container que está dentro de header */
+  position: relative;
+}
+header .header-black {
+  background-color: #2f3542;
+  height: 40px;
+}
+header #logotipo {
+  position: absolute;
+  top: -25px;
+    z-index: 3;
+}
+#banner h1.efeito{ /* chama a classe banner h1 do html e aplica o efeito */
+    color:red;
+    font-size: 12em;
+}
+header .header-black ul {
+  /* retira o ponto que estava na parte cinza */
+  list-style: none;
+  height: 40px;
+}
+#menu ul {
+  margin: 76px 0; /* margem "inferior" do menu */
+  position: absolute;
+  right: 4px;
+}
+#menu li {
+  display: inline-block;
+  font-family: "OpenSans"; /* fonte do menu */
+  ;
+}
+#menu li.search {
+  width: 182px; /* tamanho da janela busca */
+  transition-timing-function: cubic-bezier(1,-.91,1.45,1); /* velocidade inicial e final */
+  transition-duration: 1s; /* efeito de ida e volta da janela de busca */   
+}
+#menu li.search.ativo{
+    width: 300px; 
+}
+#menu li.search input {
+  background-color: #eccc68;
+  color: #fff;
+  border: none;
+  height: 30px; /* altura da caixa de busca */
+  line-height: 30px; /* para o texto da caixa ficar centralizado coloca igual height */
+}
+#menu li.search.ativo input{
+    width: 300px; 
+}
+#menu li.search::-webkit-input-placeholder{
+      
+  color: #fff;
+}
+#menu li a {
+  font-size: 16px;
+  padding: 10px 25px;
+  color: #fff;
+  font-weight: bold;
+}
+.input-group-append {
+  height: 30px;
+  line-height: 30px;
+}
+#menu li.search button {
+  border: none;
+  background: #eccc68; /* cor de fundo da lupa */
+  position: absolute; /* para as janelas de busca e lupa se "unirem" */
+  right: 0px; /* configuração da caixa da lupa */
+  height: 30px; /* configuração da caixa da lupa */
+  line-height: 25px; /* posição da lupa */
+}
+#menu li.search button i {
+  right: 5px;
+  top; 3px;
+  border: :none;
+  background: none;
+  position: absolute;
+}
+#banner {
+  width: 100%;
+  height: 870px;
+  position: relative; /* para subir o id banner */
+  background: url("../img/banner2.jpg") no-repeat; /* forma abreviada */
+  top: -160px;
+  background-size: cover;
+  background-position: -82px -100px;
+}
+#banner h1 {
+  /* sombra do nome */
+  transition: 1s;    
+  color: #fff;
+  top: 360px;
+  right: -130px;
+  position: relative; /* ativa o elemento */
+  font-size: 92px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 45);
+  font-family: "OpenSans-Light";
+  margin-left: 50px;
+}
+#banner h1 small {
+  font-size: 32px;
+  display: block; /* vai para baixo do tautus */
+  color: #fff;
+  font-family: "OpenSans";
+  font-weight: bold;
+}
+#news {
+  position: relative;
+  top: -110px;
+}
+#news h2 {
+  color: #2f3542;
+  font-family: "OpenSans-Light";
+  font-size: 48px;
+  text-transform: uppercase; /* A aparencia fica maiuscula mas quando um site de busca indexar o texto é escrito corretamente */
+  text-align: center;
+  margin: 0 auto; /* para centralizar o elemento */
+  margin-top: -68px;
+}
+#news hr {
+  border: #eccc68 solid 8px;
+  width: 200px;
+  margin: 0 auto;
+}
+#news .thumbnails {
+  margin-top: 20px;
+}
+#news .thumbnails h3 {
+  color: #2f3542;
+  font-size: 18px;
+  font-family: "OpenSans";
+  font-weight: bold;
+  margin-bottom: 0; /* determina a largura 0 para a data ficar mais próximo do texto */
+  margin-top: 8px;
+}
+#news .thumbnails time {
+  color: #a7a7a7;
+  font-size: 18px;
+  font-family: "OpenSans";
+}
+#estatisticas {
+  background-color: #df8329;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+}
+#estatisticas p {
+  color: #2f3542;
+  text-transform: uppercase;
+  font-family: "OpenSans-Light";
+  font-size: 75px;
+  margin-top: 20px;
+}
+#estatisticas p small {
+  color: #fff;
+  font-size: 24px;
+  display: block; /* exibe o elemento como elemento de bloco e quebra a linha */
+}
+#call-to-action {
+  text-align: center;
+  margin-top: 105px;
+}
+#call-to-action h2 {
+  color: #2f3542;
+  font-family: "OpenSans-Light";
+  font-size: 48px;
+  text-transform: uppercase; /* A aparencia fica maiuscula mas quando um site de busca indexar o texto é escrito corretamente */
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+#call-to-action hr {
+  border: #eccc68 solid 8px;
+  width: 200px;
+  margin: 0 auto;
+}
+#call-to-action p {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: #656565;
+  margin-left: 170px;
+}
+#call-to-action .btn-laranja {
+  color: #fff;
+  background-color: #eccc68;
+  border-color: #ccc;
+  min-width: 164px;
+  height: 44px;
+}
+#call-to-action .btn-branco {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  min-width: 164px;
+  height: 44px;
+}
+#call-to-action .row-max-400 {
+  margin: 0 auto;
+  max-width: 400px;
+}
+/*#call-to-action .btn {
+  min-width: 164px;
+  height: 44px;
+  line-height: 29px;
+}*/
+#call-to-action .btn {
+  margin: 0px 15px 5px 15px;
+  border-radius: 0;
+}
+/* ? :hover aplica a estilização apenas quando se passa o mouse em cima */
+a:hover {
+  opacity: 0.6;
+}
+footer {
+  margin-top: 110px;
+}
+footer .row {
+  width: 100%;
+  margin-left: 0;
+}
+footer .row p {
+  line-height: 60px;
+  margin-bottom: 0; /* para tirar a parte branca do último cinza */
+}
+footer .row-cinza-claro {
+  /* só de usar o row ja cobre 100% */
+  height: 200px;
+  background-color: #2f3542;
+}
+footer .row-cinza-escuro {
+  height: 60px;
+  background-color: #1d242b;
+  border-top: #242d37 1px solid; /*coloca a borda só no topo */
+}
+footer .pull-left {
+  font-family: "OpenSans";
+  font-size: 14px;
+  color: #666;
+}
+footer .text-color {
+  color: #df8329;
+  font-family: "OpenSans";
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 370px;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .logotipo {
+  margin-top: 50px;
+  margin-left: -75px;
+}
+footer .row-cols > div {
+  /* toda div que vier depois = ">" */
+  margin-top: 40px;
+}
+footer .row-cols h4 {
+  font-family: "OpenSans";
+  font-size: 16px;
+  color: #fff;
+  padding-bottom: 17px; /* margem interna */
+  border-bottom: #df8329 1px solid;
+}
+footer .row-cols h5 {
+  color: #666;
+  font-family: Arial;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+footer .row-cols time {
+  color: #eccc68;
+  font-family: Arial;
+  font-size: 14px;
+}
+footer .col-links a {
+  color: #fff;
+  font-size: 14px;
+  font-family: Arial;
+}
+footer .col-links .fa {
+  margin: 0 6px;
+}
+footer .col-contato address {
+  color: #666;
+  font-family: Arial;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+footer .col-contato address span {
+  display: inline-block;
+}
+footer .col-contato address i {
+  position: relative;
+  top: -14px;
+}
+footer .col-contato i {
+  color: #9b9b9b;
+  font-size: 20px;
+  margin: 0 6px;
+}
+footer .col-contato p {
+  line-height: 20px;
+}
+footer .list-socials {
+  margin-top: 4px;
+}
+footer .list-socials li {
+  display: inline-block;
+}
+footer .col-contato a {
+  color: #666;
+}
+footer .list-socials a {
+  display: block;
+  border: #9b9b9b 1px solid;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 14px;
+  text-align: center;
+}
+footer .list-socials i {
+  font-size: 16px;
+  margin: 7px auto;
+}
